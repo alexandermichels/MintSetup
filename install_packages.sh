@@ -48,6 +48,9 @@ sudo apt-get -y install vlc
 #install gitkraken
 sudo apt-get -y install ./gitkraken-amd64.deb
 
+#install deluge
+sudo apt-get -y install deluge
+
 #requires Enters
 #LinuxBrew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -64,7 +67,6 @@ brew install hello
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get -y update
 sudo apt-get -y install atom
-
 
 #Netbeans
 sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
@@ -83,9 +85,10 @@ sudo apt-get -y upgrade
 sudo apt-get -y remove thunderbird
 sudo apt-get -y remove pidgin
 sudo apt-get -y remove hexchat
-sudo apt-get -y remove transmission
+sudo apt-get -y remove transmission-gtk
 sudo apt-get -y remove rhythmbox
 sudo apt-get -y remove mopidy
+sudo apt-get -y remove xplayer
 
 sudo apt-get -y autoremove
 sudo apt-get -y clean
