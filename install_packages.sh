@@ -17,7 +17,7 @@ sudo apt-get -y update -y
 sudo apt-get -y install miktex -y
 
 #install texstudio
-sudo apt-get -y -y texstudio
+sudo apt-get -y texstudio
 
 #install R
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
