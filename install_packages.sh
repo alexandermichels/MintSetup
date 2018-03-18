@@ -70,6 +70,8 @@ brew install hello
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get -y update
 sudo apt-get -y install atom
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
 
 #Netbeans
 sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
