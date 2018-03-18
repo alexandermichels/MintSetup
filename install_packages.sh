@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
@@ -23,9 +24,15 @@ mpm --verbose --package-level=complete --upgrade
 sudo apt-get -y install texstudio
 
 #install R
+sudo apt install r-base-code
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-echo "deb http://https://cran.cnr.berkeley.edu//bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
+echo "deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
 sudo apt-get -y update
+sudo apt-get install r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
+sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
 
 #install RStudio
 sudo apt-get -y install rstudio
