@@ -16,10 +16,10 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC24356
 echo "deb http://miktex.org/download/ubuntu xenial universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt-get -y update
 sudo apt-get -y install miktex
-miktexsetup finish
-initexmf --set-config-value [MPM]AutoInstall=1
+sudo miktexsetup --shared=yes finish
+sudo initexmf --admin --set-config-value [MPM]AutoInstall=1
 sudo apt-get install -y texlive-latex-extra
-mpm --verbose --package-level=complete --upgrade
+sudo mpm --admin --verbose --package-level=complete --upgrade
 
 #install texstudio
 sudo apt-get -y install texstudio
