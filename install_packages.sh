@@ -18,6 +18,7 @@ sudo apt-get -y update
 sudo apt-get -y install miktex
 miktexsetup finish
 initexmf --set-config-value [MPM]AutoInstall=1
+texlive-latex-extra
 mpm --verbose --package-level=complete --upgrade
 
 #install texstudio
