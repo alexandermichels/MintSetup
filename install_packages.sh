@@ -18,7 +18,7 @@ sudo apt-get -y update
 sudo apt-get -y install miktex
 miktexsetup finish
 initexmf --set-config-value [MPM]AutoInstall=1
-texlive-latex-extra
+sudo apt-get install -y texlive-latex-extra
 mpm --verbose --package-level=complete --upgrade
 
 #install texstudio
@@ -29,7 +29,7 @@ sudo apt install r-base-code
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 echo "deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
 sudo apt-get -y update
-sudo apt-get install r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
+sudo apt-get install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
 sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
 sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
 sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
@@ -72,6 +72,8 @@ echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.p
 export PATH=$HOME/.linuxbrew/bin:$PATH
 hash -r
 sudo apt-get -y install linuxbrew-wrapper
+brew doctor
+echo 'export PATH="/home/alex/.linuxbrew/bin:$PATH"' >> ~/.bash_profile
 brew install hello
 
 #Atom
