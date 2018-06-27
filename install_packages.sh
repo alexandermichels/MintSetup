@@ -38,12 +38,13 @@ sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
 #install RStudio
 sudo apt-get -y install rstudio
 
-#install JDK ? idk if this will work
-tar -zxvf jdk-8u161-linux-x64.tar.gz
-sudo mkdir -p /opt/java
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk/bin/java 1
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk/bin/java 1
-sudo update-alternatives --set java /opt/java/jdk1.8.0_161/bin/java
+#install JDK
+sudo echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a     /etc/apt/sources.list
+sudo echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+sudo apt-get update
+sudo apt-get -y install oracle-java8-installer
+#add .desktop file
 
 #install spotify
 sudo apt-get -y install spotify-client
@@ -83,6 +84,9 @@ sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
+#Jupyter Notebook
+sudo pip install notebook
+
 #Netbeans
 sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
 ./netbeans-8.2-cpp-linux-x64.sh
@@ -92,6 +96,7 @@ sudo apt-get -y install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libb
 sudo unzip -o android-studio-ide-171.4443003-linux.zip -d /usr/local
 cd /usr/local/android-studio/bin
 ./studio.sh
+#add .desktop file
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
