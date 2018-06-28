@@ -16,7 +16,7 @@ This is an always growing list as I expand the work I am doing and the tools I u
 
 ### /bin Contents
 
-#### GeneralizeRequirementDotTxt.py
+#### \ GeneralizeRequirementDotTxt.py
 
 Simple script to take a "requirements.txt" file and strip the specific versions from it. Below demonstrates what I mean by this with "example==9.3.4" being a typical entry in a "requirements.txt" file and "example" being the output from my script.
 
