@@ -7,6 +7,8 @@ sudo apt-get -y install g++
 
 #install git
 sudo apt-get -y install git
+git config --global user.name "alexandermichels"
+git config --global user.email alexandercm4297@gmail.com
 
 #install curl
 sudo apt-get -y install curl
@@ -84,8 +86,9 @@ sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
-#Jupyter Notebook
-sudo pip install notebook
+#Install a bunch of Python packages
+sudo python3 -m pip install -r python3_packages.txt
+sudo python -m pip install -r python2_packages.txt
 
 #Netbeans
 sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
