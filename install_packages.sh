@@ -86,6 +86,10 @@ sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
+#install pip
+apt install python-pip	#python 2
+ apt install python3-pip	#python 3
+
 #Install a bunch of Python packages
 sudo python3 -m pip install -r python3_packages.txt
 sudo python -m pip install -r python2_packages.txt
