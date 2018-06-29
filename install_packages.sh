@@ -87,8 +87,8 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 #install pip
-apt install python-pip	#python 2
- apt install python3-pip	#python 3
+apt install -y python-pip	#python 2
+apt install -y python3-pip	#python 3
 
 #Install a bunch of Python packages
 sudo python3 -m pip install -r python3_packages.txt
