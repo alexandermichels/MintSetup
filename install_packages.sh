@@ -2,6 +2,13 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
+#install pip
+apt install -y python-pip
+sudo pip install --upgrade pip
+
+#a bunch of "essentials" for python3
+sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
+
 #install G++
 sudo apt-get -y install g++
 
@@ -9,6 +16,12 @@ sudo apt-get -y install g++
 sudo apt-get -y install git
 git config --global user.name "alexandermichels"
 git config --global user.email alexandercm4297@gmail.com
+
+#install spotify
+sudo apt-get -y install spotify-client
+
+#install chromium
+sudo apt-get -y install chromium-browser
 
 #install curl
 sudo apt-get -y install curl
@@ -48,12 +61,6 @@ sudo apt-get update
 sudo apt-get -y install oracle-java8-installer
 #add .desktop file
 
-#install spotify
-sudo apt-get -y install spotify-client
-
-#install chromium
-sudo apt-get -y install chromium-browser
-
 #install VLC
 sudo add-apt-repository ppa:videolan/stable-daily
 sudo apt-get -y update
@@ -86,14 +93,6 @@ sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
-#install pip
-apt install -y python-pip	#python 2
-apt install -y python3-pip	#python 3
-
-#Install a bunch of Python packages
-sudo python3 -m pip install -r python3_packages.txt
-sudo python -m pip install -r python2_packages.txt
-
 #Netbeans
 sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
 ./netbeans-8.2-cpp-linux-x64.sh
@@ -104,6 +103,10 @@ sudo unzip -o android-studio-ide-171.4443003-linux.zip -d /usr/local
 cd /usr/local/android-studio/bin
 ./studio.sh
 #add .desktop file
+
+#Install a bunch of Python packages
+sudo python3 -m pip install -r python3_packages.txt
+sudo python -m pip install -r python2_packages.txt
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
