@@ -25,3 +25,11 @@ This is an always growing list as I expand the work I am doing and the tools I u
 Simple script to take a "requirements.txt" file and strip the specific versions from it. Below demonstrates what I mean by this with "example==9.3.4" being a typical entry in a "requirements.txt" file and "example" being the output from my script.
 
 > example==9.3.4 ---> example
+
+If you want to bring over the Python packages you have installed, run the following command:
+
+```
+$ pip freeze > requirements.txt
+```
+
+For Python 2.X you probably want to probably want to prepend the command with "python -m" and for Python 3.X you would probably want "python3 -m".

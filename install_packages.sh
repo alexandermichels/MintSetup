@@ -104,6 +104,9 @@ cd /usr/local/android-studio/bin
 ./studio.sh
 #add .desktop file
 
+#install Spyder3
+sudo python3 -m pip install -U spyder
+
 #Install a bunch of Python packages
 sudo python3 -m pip install -r python3_packages.txt
 sudo python -m pip install -r python2_packages.txt
