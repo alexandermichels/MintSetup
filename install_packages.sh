@@ -4,10 +4,11 @@ sudo apt-get -y upgrade
 
 #install pip
 apt install -y python-pip
+apt install -y python3-pip
 sudo pip install --upgrade pip
 
 #a bunch of "essentials" for python3
-sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo apt-get install python3 setuptools python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
 
 #install G++
 sudo apt-get -y install g++
