@@ -8,7 +8,8 @@ apt install -y python3-pip
 sudo pip install --upgrade pip
 
 #a bunch of "essentials" for python3
-sudo apt-get install python3 setuptools python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo python3 -m pip install setuptools wheel
 
 #install G++
 sudo apt-get -y install g++
@@ -22,7 +23,10 @@ git config --global user.email alexandercm4297@gmail.com
 sudo apt-get -y install spotify-client
 
 #install chromium
-sudo apt-get -y install chromium-browser
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update
+sudo apt-get install google-chrome stable
 
 #install curl
 sudo apt-get -y install curl
