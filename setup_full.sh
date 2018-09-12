@@ -10,6 +10,9 @@ sudo pip install --upgrade pip
 #a bunch of "essentials" for python3
 sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
 sudo python3 -m pip install setuptools wheel
+#install Spyder
+sudo apt-get install spyder
+sudo apt-get install spyder3
 
 #install G++
 sudo apt-get -y install g++
@@ -22,11 +25,11 @@ git config --global user.email alexandercm4297@gmail.com
 #install spotify
 sudo apt-get -y install spotify-client
 
-#install chromium
+#install Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
-sudo apt-get install google-chrome stable
+sudo apt-get install google-chrome-stable
 
 #install curl
 sudo apt-get -y install curl
@@ -44,20 +47,6 @@ sudo mpm --admin --verbose --package-level=complete --upgrade
 #install texstudio
 sudo apt-get -y install texstudio
 
-#install R
-sudo apt install r-base-code
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-echo "deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
-sudo apt-get -y update
-sudo apt-get install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
-sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
-sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
-sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
-sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
-
-#install RStudio
-sudo apt-get -y install rstudio
-
 #install JDK
 sudo echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a     /etc/apt/sources.list
 sudo echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
@@ -70,9 +59,6 @@ sudo apt-get -y install oracle-java8-installer
 sudo add-apt-repository ppa:videolan/stable-daily
 sudo apt-get -y update
 sudo apt-get -y install vlc
-
-#install gitkraken
-sudo apt-get -y install ./gitkraken-amd64.deb
 
 #install deluge
 sudo apt-get -y install deluge
@@ -98,23 +84,20 @@ sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
-#Netbeans
-sudo chmod +x netbeans-8.2-cpp-linux-x64.sh
-./netbeans-8.2-cpp-linux-x64.sh
 
-#install Android Studio
-sudo apt-get -y install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-sudo unzip -o android-studio-ide-171.4443003-linux.zip -d /usr/local
-cd /usr/local/android-studio/bin
-./studio.sh
-#add .desktop file
+#install R
+sudo apt install r-base-code
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+echo "deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
+sudo apt-get -y update
+sudo apt-get install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
+sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
+sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
 
-#install Spyder3
-sudo python3 -m pip install -U spyder
-
-#Install a bunch of Python packages
-sudo python3 -m pip install -r python3_packages.txt
-sudo python -m pip install -r python2_packages.txt
+#install RStudio
+sudo apt-get -y install rstudio
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
