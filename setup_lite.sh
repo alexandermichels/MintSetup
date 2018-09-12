@@ -10,6 +10,7 @@ sudo pip install --upgrade pip
 #a bunch of "essentials" for python3
 sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
 sudo python3 -m pip install setuptools wheel
+sudo apt-get install spyder3
 
 #install G++
 sudo apt-get -y install g++
@@ -26,7 +27,7 @@ sudo apt-get -y install spotify-client
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
-sudo apt-get install google-chrome stable
+sudo apt-get install google-chrome-stable
 
 #install VLC
 sudo add-apt-repository ppa:videolan/stable-daily
