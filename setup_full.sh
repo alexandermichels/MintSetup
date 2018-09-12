@@ -26,7 +26,7 @@ sudo apt-get -y install spotify-client
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
-sudo apt-get install google-chrome stable
+sudo apt-get install google-chrome-stable
 
 #install curl
 sudo apt-get -y install curl
@@ -57,9 +57,6 @@ sudo add-apt-repository ppa:videolan/stable-daily
 sudo apt-get -y update
 sudo apt-get -y install vlc
 
-#install gitkraken
-sudo apt-get -y install ./gitkraken-amd64.deb
-
 #install deluge
 sudo apt-get -y install deluge
 
@@ -85,7 +82,7 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 #install Spyder3
-sudo python3 -m pip install -U spyder
+sudo apt-get install spyder
 
 #Install a bunch of Python packages
 sudo python3 -m pip install -r python3_packages.txt
