@@ -4,51 +4,23 @@
 
 This is Bash script to help me configure [Linux Mint](https://www.linuxmint.com/) computers I work on to have the applications and packages I like to use. This is meant to be as general as possible, but when I need to make a decision, I make it to work for the most recent version of Linux Mint Cinnamon, right now that is [Linux Mint 19 "Tara" Cinnamon](https://www.linuxmint.com/edition.php?id=254).
 
-There are two flavors to this install script, `setup_full.sh` and `setup_lite.sh`. The former is meant to setup a computer with lots of software for development and the later is meant to simply install utilities and remove what I percieve as "bloatware" in Linux Mint. Everything in the Lite version runs in the Full version.
+There are two flavors to this install script, **full** and **lite**. The former is meant to setup a computer with lots of software for development and the later is meant to simply install utilities and remove what I percieve as "bloatware" in Linux Mint. Everything in the Lite version runs in the Full version.
 
 
 ## Usage
 
-You will also want to change the git config to your username and email! To run you can simply use:
+You will also want to change the git config to your username and email! By default the setup script will install the lite version:
 
-> bash setup_lite.sh
+> bash setup.sh
 
-> bash setup_full.sh
+For the full version, use the `-f` or `--full` flag:
+
+> bash setup.sh -f
+
 
 ## Documentation
 
-#### setup_full.sh
-
-Both versions remove:
-* Hexchat
-* Mopidy
-* Pidgin
-* Rhythmbox
-* Transmission
-* Xplayer
-
-**Included Packages:**
-* Atom
-* Curl
-* Deluge
-* G++
-* Git (and configures a global email and name and sets a 1 hour cache)
-* Google Chrome
-* Grip (amazing for converting markdown to HTML)
-* JDK (Oracle Java 8)
-* MiKTeK (as admin)
-* Pip (for Python 2 and Python 3)
-* A variety of "essentials" Python packages
-* R (with some R packages and essentials)
-* RStudio
-* Spotify
-* Spyder (for Python 2 and Python 3)
-* TexStudio
-* VLC
-
-#### setup_lite.sh
-
-**Included Packages:**
+**Included Software:**
 * Atom
 * Curl
 * Deluge
@@ -60,6 +32,26 @@ Both versions remove:
 * Spotify
 * Spyder (for Python 2 and Python 3)
 * VLC
+
+**Both versions remove:**
+* Hexchat
+* Mopidy
+* Pidgin
+* Rhythmbox
+* Transmission
+* Xplayer
+
+#### Full
+
+The full version additionally installs the following:
+
+**Included Packages:**
+* Grip (amazing for converting markdown to HTML)
+* JDK (Oracle Java 8)
+* MiKTeK (as admin)
+* R (with some R packages and essentials)
+* RStudio
+* TexStudio
 
 ## TODO
 
