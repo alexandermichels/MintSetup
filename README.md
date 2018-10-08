@@ -8,11 +8,7 @@ This is Bash script to help me configure Linux Mint computers I work on to have 
 ### Usage
 ---------
 
-<<<<<<< HEAD
-* You have to make sure you have an Android Studio ZIP, gitkraken.deb, jdk.tar.gz, and Netbeans.sh for all of this to execute.
-=======
 * You have to make sure you have an gitkraken.deb and jdk.tar.gz for all of this to execute.
->>>>>>> 104b7da6d6d3b190825a9f2468b67ea442363a99
 * Also make sure that you update the filenames and paths in the Bash script. This assumes in same directory.
 * You will also want to change the git config to your username and email
 

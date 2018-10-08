@@ -50,7 +50,6 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 
 #Clean
-sudo apt-get -y remove thunderbird
 sudo apt-get -y remove pidgin
 sudo apt-get -y remove hexchat
 sudo apt-get -y remove transmission-gtk

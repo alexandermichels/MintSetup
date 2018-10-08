@@ -63,27 +63,12 @@ sudo apt-get -y install vlc
 #install deluge
 sudo apt-get -y install deluge
 
-#requires Enters
-#LinuxBrew
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
-test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
-echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
-export PATH=$HOME/.linuxbrew/bin:$PATH
-hash -r
-sudo apt-get -y install linuxbrew-wrapper
-brew doctor
-echo 'export PATH="/home/alex/.linuxbrew/bin:$PATH"' >> ~/.bash_profile
-brew install hello
-
 #Atom
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get -y update
 sudo apt-get -y install atom
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
-
 
 #install R
 sudo apt install r-base-code
@@ -103,7 +88,6 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 
 #Clean
-sudo apt-get -y remove thunderbird
 sudo apt-get -y remove pidgin
 sudo apt-get -y remove hexchat
 sudo apt-get -y remove transmission-gtk
