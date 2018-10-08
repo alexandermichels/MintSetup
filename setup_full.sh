@@ -8,11 +8,11 @@ apt install -y python3-pip
 sudo pip install --upgrade pip
 
 #a bunch of "essentials" for python3
-sudo apt-get install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo apt-get -y install python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
 sudo python3 -m pip install setuptools wheel
 #install Spyder
-sudo apt-get install spyder
-sudo apt-get install spyder3
+sudo apt-get -y install spyder
+sudo apt-get -y install spyder3
 
 #install G++
 sudo apt-get -y install g++
@@ -21,6 +21,8 @@ sudo apt-get -y install g++
 sudo apt-get -y install git
 git config --global user.name "alexandermichels"
 git config --global user.email alexandercm4297@gmail.com
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
 
 #install spotify
 sudo apt-get -y install spotify-client
@@ -28,20 +30,20 @@ sudo apt-get -y install spotify-client
 #install Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+sudo apt-get -y update
+sudo apt-get -y install google-chrome-stable
 
 #install curl
 sudo apt-get -y install curl
 
 #install MiKTeX
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
-echo "deb http://miktex.org/download/ubuntu xenial universe" | sudo tee /etc/apt/sources.list.d/miktex.list
+echo "deb [arch=amd64] http://miktex.org/download/ubuntu bionic universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt-get -y update
 sudo apt-get -y install miktex
 sudo miktexsetup --shared=yes finish
 sudo initexmf --admin --set-config-value [MPM]AutoInstall=1
-sudo apt-get install -y texlive-latex-extra
+sudo apt-get -y install -y texlive-latex-extra
 sudo mpm --admin --verbose --package-level=complete --upgrade
 
 #install texstudio
@@ -67,15 +69,16 @@ sudo apt-get -y install deluge
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get -y update
 sudo apt-get -y install atom
-git config --global credential.helper cache
-git config --global credential.helper 'cache --timeout=3600'
+
+#Grip
+sudo pip install grip
 
 #install R
-sudo apt install r-base-code
+sudo apt install -y r-base-code
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-echo "deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu stretch -cran34/"  | sudo tee -a /etc/apt/sources.list
+echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"  | sudo tee -a /etc/apt/sources.list
 sudo apt-get -y update
-sudo apt-get install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
+sudo apt-get -y install r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
 sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
 sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
 sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
@@ -94,6 +97,12 @@ sudo apt-get -y remove transmission-gtk
 sudo apt-get -y remove rhythmbox
 sudo apt-get -y remove mopidy
 sudo apt-get -y remove xplayer
+sudo apt-get -y purge pidgin
+sudo apt-get -y purge hexchat
+sudo apt-get -y purge transmission-gtk
+sudo apt-get -y purge rhythmbox
+sudo apt-get -y purge mopidy
+sudo apt-get -y purge xplayer
 
 sudo apt-get -y autoremove
 sudo apt-get -y clean
