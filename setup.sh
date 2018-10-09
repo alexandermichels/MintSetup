@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+
+fullinstallation="false";
 if [ $1 = "-f" ] || [ $1 = "--full" ]; then
+    fullinstallation="true";
     echo "Full installation selected."
 else
     echo "Lite installation will proceed by default."
@@ -50,7 +53,7 @@ sudo apt-get -y install vlc
 #install deluge
 sudo apt-get -y install deluge
 
-if [ $1 = "-f" ] || [ $1 = "--full" ]; then
+if [ $fullinstallation == "true" ]; then
     #Atom
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get -y update
