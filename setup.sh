@@ -51,6 +51,12 @@ sudo apt-get -y install vlc
 sudo apt-get -y install deluge
 
 if [ $1 = "-f" ] || [ $1 = "--full" ]; then
+    #htop
+    sudo apt install htop
+
+    # VirtualEnv
+    sudo pip install virtualenv
+    
     #Atom
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get -y update
@@ -75,7 +81,14 @@ if [ $1 = "-f" ] || [ $1 = "--full" ]; then
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
     sudo apt-get update
     sudo apt-get -y install oracle-java8-installer
+    sudo apt install -y oracle-java8-set-default
     #add .desktop file
+
+    #Gradle
+    sudo apt-get -y install gradle
+
+    #Maven
+    sudo apt-get -y install maven
 
     #Grip
     sudo pip install grip

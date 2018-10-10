@@ -46,8 +46,10 @@ For the full version, use the `-f` or `--full` flag:
 The full version additionally installs the following:
 
 **Included Packages:**
+* Gradle
 * Grip (amazing for converting markdown to HTML)
 * JDK (Oracle Java 8)
+* Maven
 * MiKTeK (as admin)
 * R (with some R packages and essentials)
 * RStudio
