@@ -56,7 +56,10 @@ sudo apt-get -y install deluge
 
 if [ $fullinstallation == "true" ]; then
     #htop
-    sudo apt install htop
+    sudo apt install -y htop
+
+    #pytest
+    sudo apt install -y python-pytest
 
     # VirtualEnv
     sudo pip install virtualenv
@@ -88,7 +91,9 @@ if [ $fullinstallation == "true" ]; then
     #add .desktop file
 
     #Gradle
-    sudo apt-get -y install gradle
+    sudo add-apt-repository ppa:cwchien/gradle
+    sudo apt-get -y update
+    sudo apt upgrade -y gradle
 
     #Maven
     sudo apt-get -y install maven
