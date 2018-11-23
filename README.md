@@ -11,53 +11,60 @@ There are two flavors to this install script, **full** and **lite**. The former 
 
 You will also want to change the git config to your username and email! By default the setup script will install the lite version:
 
-> bash setup.sh
+```bash
+$ bash setup.sh
+```
 
 For the full version, use the `-f` or `--full` flag:
 
-> bash setup.sh -f
+```bash
+$ bash setup.sh -f
+$ bash setup.sh --full
+```
 
 
 ## Documentation
 
 **Included Software:**
-* Atom
-* Curl
-* Deluge
-* G++
-* Git (and configures a global email and name)
-* Google Chrome
-* Pip (for Python 2 and Python 3)
+* [Atom](https://atom.io/)
+* [Curl](https://curl.haxx.se/)
+* [Deluge](https://deluge-torrent.org/)
+* [G++](https://linux.die.net/man/1/g++)
+* [Git (and configures a global email and name)](https://git-scm.com/)
+* [Google Chrome](https://www.google.com/chrome/)
+* [Pip (for Python 2 and Python 3)](https://pypi.org/project/pip/)
 * A variety of "essentials" Python packages
-* Spotify
-* Spyder (for Python 2 and Python 3)
-* VLC
+* [Spotify](https://www.spotify.com/us/)
+* [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
+* [VLC](https://www.videolan.org/vlc/index.html)
 
 **Both versions remove:**
-* Hexchat
-* Mopidy
-* Pidgin
-* Rhythmbox
-* Transmission
-* Xplayer
+* [Hexchat](https://hexchat.github.io/)
+* [Mopidy](https://www.mopidy.com/)
+* [Pidgin](https://pidgin.im/)
+* [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
+* [Transmission](https://transmissionbt.com/)
+* [Xplayer](https://github.com/linuxmint/xplayer)
 
 #### Full
 
 The full version additionally installs the following:
 
 **Included Packages:**
-* Gradle
-* Grip (amazing for converting markdown to HTML)
-* JDK (Oracle Java 8)
-* Maven
-* MiKTeK (as admin)
-* R (with some R packages and essentials)
-* RStudio
-* TexStudio
+* [Gradle](https://gradle.org/)
+* [Grip (amazing for converting markdown to HTML)](https://github.com/joeyespo/grip)
+* [Open MPI (libopenmpi-dev)](https://www.open-mpi.org/)
+* [JDK (Oracle Java 8)](https://www.oracle.com/technetwork/java/index.html)
+* [Maven](https://maven.apache.org/)
+* [Mesa 3D Graphics Library (libosmesa6-dev)](https://mesa3d.org/)
+* [MiKTeK (as admin)](https://miktex.org/)
+* [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables) (patchelf)](https://nixos.org/patchelf.html)
+* [OpenGL API (libgl1-mesa-dev)](https://www.mesa3d.org/)
+* [R (with some R packages and essentials)](https://www.r-project.org/)
+* [RStudio](https://www.rstudio.com/)
+* [TexStudio](https://www.texstudio.org/)
 
 ## TODO
-
-Add links to all of the packages mentioned.
 
 This is an always growing list as I expand the work I am doing and the tools I use. Once I find the time and motivation, I would like to find and save the specific configurations for each the applications mentioned also.
 

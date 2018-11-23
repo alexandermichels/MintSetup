@@ -55,20 +55,23 @@ sudo apt-get -y install deluge
 
 
 if [ $fullinstallation == "true" ]; then
-    #htop
+    # htop
     sudo apt install -y htop
 
-    #pytest
+    # pytest
     sudo apt install -y python-pytest
+
+    # OpenGL API, Mesa Off-screen rendering extension, and other fun stuff for [mujoco-py](https://github.com/openai/mujoco-py#install-mujoco)
+    sudo apt-get install -y libosmesa6-dev libgl1-mesa-dev libopenmpi-dev patchelf
 
     # VirtualEnv
     sudo pip install virtualenv
-    #Atom
+    # Atom
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get -y update
     sudo apt-get -y install atom
 
-    #install MiKTeX
+    # install MiKTeX
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
     echo "deb [arch=amd64] http://miktex.org/download/ubuntu bionic universe" | sudo tee /etc/apt/sources.list.d/miktex.list
     sudo apt-get -y update
@@ -78,10 +81,10 @@ if [ $fullinstallation == "true" ]; then
     sudo apt-get -y install -y texlive-latex-extra
     sudo mpm --admin --verbose --package-level=complete --upgrade
 
-    #install texstudio
+    # install texstudio
     sudo apt-get -y install texstudio
 
-    #install JDK
+    # install JDK
     sudo echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main" | tee -a     /etc/apt/sources.list
     sudo echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main" | tee -a /etc/apt/sources.list
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
