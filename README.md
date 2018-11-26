@@ -27,6 +27,7 @@ $ bash setup.sh --full
 
 **Included Software:**
 * [Atom](https://atom.io/)
+* [CMake](https://cmake.org/)
 * [Curl](https://curl.haxx.se/)
 * [Deluge](https://deluge-torrent.org/)
 * [G++](https://linux.die.net/man/1/g++)
