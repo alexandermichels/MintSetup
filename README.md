@@ -1,4 +1,4 @@
-# Linux Mint Setup 1.2.0
+# Mint Setup 1.2.0
 
 ## Table of Contents
 * <a href="#intro">Introduction</a>
@@ -12,8 +12,9 @@
 
 This is Bash script to help me configure [Linux Mint](https://www.linuxmint.com/) computers I work on to have the applications and packages I like to use. This is meant to be as general as possible, but when I need to make a decision, I make it to work for the most recent version of Linux Mint Cinnamon, right now that is [Linux Mint 19 "Tara" Cinnamon](https://www.linuxmint.com/edition.php?id=254).
 
-There are two flavors to this install script, **full** and **lite**. The former is meant to setup a computer with lots of software for development and the later is meant to simply install utilities and remove what I percieve as "bloatware" in Linux Mint. Everything in the Lite version runs in the Full version.
+There are two strengths to this install script, **Full** and **Lite**. The former is meant to setup a computer with lots of software for programmers and the later is meant to simply install utilities and remove software that I don't find particularly useful/have been alternatives to. You can find a list of such software in the <a href="#docs">Documentation section</a>. Everything in the **Lite** version runs in the **Full** version and the **Lite** version runs by default.
 
+Your other option is whether or not you would like to have weekly updates run or not. By default, this is disabled. If you choose to enable it (see the <a href="#usage">Usage section</a>), you can enter your email and computer name to have reports sent to your email.
 
 ## <a id="usage">Usage</a>
 
@@ -58,7 +59,7 @@ $ bash setup.sh --updates --full
 * [Google Chrome](https://www.google.com/chrome/)
 * [MailUtils](https://mailutils.org/)
 * [Pip (for Python 2 and Python 3)](https://pypi.org/project/pip/)
-* A variety of "essentials" Python packages
+* A variety of "essential" Python packages
 * [Spotify](https://www.spotify.com/us/)
 * [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
 * [VLC](https://www.videolan.org/vlc/index.html)
@@ -77,13 +78,13 @@ The full version additionally installs the following:
 
 **Included Packages:**
 * [Gradle](https://gradle.org/)
-* [Grip (amazing for converting markdown to HTML)](https://github.com/joeyespo/grip)
+* [Grip](https://github.com/joeyespo/grip)
 * [Open MPI (libopenmpi-dev)](https://www.open-mpi.org/)
 * [JDK (Oracle Java 8)](https://www.oracle.com/technetwork/java/index.html)
 * [Maven](https://maven.apache.org/)
 * [Mesa 3D Graphics Library (libosmesa6-dev)](https://mesa3d.org/)
 * [MiKTeK (as admin)](https://miktex.org/)
-* [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables) (patchelf)](https://nixos.org/patchelf.html)
+* [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables)](https://nixos.org/patchelf.html)
 * [OpenGL API (libgl1-mesa-dev)](https://www.mesa3d.org/)
 * [R (with some R packages and essentials)](https://www.r-project.org/)
 * [RStudio](https://www.rstudio.com/)
