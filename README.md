@@ -1,15 +1,25 @@
-# Linux Mint Setup
+# Linux Mint Setup 1.2.0
 
-## Introduction
+## Table of Contents
+* <a href="#intro">Introduction</a>
+* <a href="#usage">Usage</a>
+* <a href="#docs">Documentation</a>
+* <a href="#todo">TODO</a>
+* <a href="#bin">/bin Contents</a>
+* <a href="#version">Versioning</a>
+
+## <a id="intro">Introduction</a>
 
 This is Bash script to help me configure [Linux Mint](https://www.linuxmint.com/) computers I work on to have the applications and packages I like to use. This is meant to be as general as possible, but when I need to make a decision, I make it to work for the most recent version of Linux Mint Cinnamon, right now that is [Linux Mint 19 "Tara" Cinnamon](https://www.linuxmint.com/edition.php?id=254).
 
 There are two flavors to this install script, **full** and **lite**. The former is meant to setup a computer with lots of software for development and the later is meant to simply install utilities and remove what I percieve as "bloatware" in Linux Mint. Everything in the Lite version runs in the Full version.
 
 
-## Usage
+## <a id="usage">Usage</a>
 
-You will also want to change the git config to your username and email! By default the setup script will install the lite version:
+You will also want to change the git config to your username and email! If you decide to use the weekly updater you will need to enter in your email and computer name as well!
+
+By default the setup script will install the lite version without weekly updates:
 
 ```bash
 $ bash setup.sh
@@ -22,8 +32,21 @@ $ bash setup.sh -f
 $ bash setup.sh --full
 ```
 
+If you would like to have weekly updates you can use the `-u` or `--updates` flag:
+```bash
+$ bash setup.sh -u
+$ bash setup.sh -updates
+```
 
-## Documentation
+Lastly, you can do both! You can have weekly update and a full setup, in either order:
+```bash
+$ bash setup.sh -f -u
+$ bash setup.sh -u -f
+$ bash setup.sh --full --updates
+$ bash setup.sh --updates --full
+```
+
+## <a id="docs">Documentation</a>
 
 **Included Software:**
 * [Atom](https://atom.io/)
@@ -33,6 +56,7 @@ $ bash setup.sh --full
 * [G++](https://linux.die.net/man/1/g++)
 * [Git (and configures a global email and name)](https://git-scm.com/)
 * [Google Chrome](https://www.google.com/chrome/)
+* [MailUtils](https://mailutils.org/)
 * [Pip (for Python 2 and Python 3)](https://pypi.org/project/pip/)
 * A variety of "essentials" Python packages
 * [Spotify](https://www.spotify.com/us/)
@@ -65,11 +89,15 @@ The full version additionally installs the following:
 * [RStudio](https://www.rstudio.com/)
 * [TexStudio](https://www.texstudio.org/)
 
-## TODO
+#### Updates
+
+The updates uses [Aptitude](https://linux.die.net/man/8/aptitude) and [Anacron](https://help.ubuntu.com/community/AutoWeeklyUpdateHowTo) to update your system weekly and email you a report.
+
+## <a id="todo">TODO</a>
 
 This is an always growing list as I expand the work I am doing and the tools I use. Once I find the time and motivation, I would like to find and save the specific configurations for each the applications mentioned also.
 
-## /bin Contents
+## <a id="bin">/bin Contents</a>
 
 #### GeneralizeRequirementDotTxt.py
 
@@ -84,3 +112,9 @@ $ pip freeze > requirements.txt
 ```
 
 For Python 2.X you probably want to probably want to prepend the command with "python -m" and for Python 3.X you would probably want "python3 -m".
+
+## <a id="version">Versioning</a>
+
+* 1.0.x : (March 17th, 2018 - September 11th, 2018) : Just one version to setup
+* 1.1.x : (September 12th, 2018 - November 25th, 2018) : Full and Lite versions
+* 1.2.x : (November 25th, 2018 - Present) : Added weekly scheduled updates
