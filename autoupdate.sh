@@ -6,7 +6,6 @@
 
 # Set the variable $admin_email as your email address.
 admin_mail="name@email.com"
-computer_name="computer_name"
 
 # Create a temporary path in /tmp to write a temporary log
 # file. No need to edit.
@@ -26,9 +25,9 @@ aptitude clean >> ${tmpfile} 2>&1
 # Send the temporary log via mail. The fact if the upgrade
 # was succesful or not is written in the subject field.
 if grep -q 'E: \|W: ' ${tmpfile} ; then
-        mail -s "Upgrade of your computer $(computer_name) failed $(date)" ${admin_mail} < ${tmpfile}
+        mail -s "Upgrade of your computer $(hostname) failed $(date)" ${admin_mail} < ${tmpfile}
 else
-        mail -s "Upgraded your computer $(computer_name) succesfully $(date)" ${admin_mail} < ${tmpfile}
+        mail -s "Upgraded your computer $(hostname) succesfully $(date)" ${admin_mail} < ${tmpfile}
 fi
 
 # Remove the temporary log file in temporary path.

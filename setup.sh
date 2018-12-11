@@ -79,8 +79,10 @@ if [ $fullinstallation == "true" ]; then
     # htop
     sudo apt install -y htop
 
-    # pytest
+    # pytest and matplotlib
     sudo apt install -y python-pytest
+    sudo apt install -y python-matplotlib
+    sudo apt install -y python3-matplotlib
 
     # OpenGL API, Mesa Off-screen rendering extension, and other fun stuff for [mujoco-py](https://github.com/openai/mujoco-py#install-mujoco)
     sudo apt install -y libosmesa6-dev libgl1-mesa-dev libopenmpi-dev patchelf
@@ -171,6 +173,7 @@ sudo apt purge -y xplayer
 sudo apt autoremove -y
 sudo apt clean -y all
 rm -rf ~/.cache/thumbnails/*
+sudo du -sh /var/cache/apt 
 
 sudo apt update -y
 sudo apt upgrade -y

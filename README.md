@@ -14,7 +14,7 @@ This is Bash script to help me configure [Linux Mint](https://www.linuxmint.com/
 
 There are two strengths to this install script, **Full** and **Lite**. The former is meant to setup a computer with lots of software for programmers and the later is meant to simply install utilities and remove software that I don't find particularly useful/have been alternatives to. You can find a list of such software in the <a href="#docs">Documentation section</a>. Everything in the **Lite** version runs in the **Full** version and the **Lite** version runs by default.
 
-Your other option is whether or not you would like to have weekly updates run or not. By default, this is disabled. If you choose to enable it (see the <a href="#usage">Usage section</a>), you can enter your email and computer name to have reports sent to your email.
+Your other option is whether or not you would like to have weekly updates run or not. By default, this is disabled. If you choose to enable it (see the <a href="#usage">Usage section</a>), you must enter your email in `autoupdate.sh` to have reports sent to your email.
 
 ## <a id="usage">Usage</a>
 
