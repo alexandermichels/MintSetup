@@ -160,12 +160,12 @@ sudo apt update -y
 sudo apt upgrade -y
 
 #Clean
-sudo apt -y remove pidgin
-sudo apt -y remove hexchat
-sudo apt -y remove transmission-gtk
-sudo apt -y remove rhythmbox
-sudo apt -y remove mopidy
-sudo apt -y remove xplayer
+sudo apt remove -y  pidgin
+sudo apt remove -y  hexchat
+sudo apt remove -y  transmission-gtk
+sudo apt remove -y  rhythmbox
+sudo apt remove -y  mopidy
+sudo apt remove -y  xplayer
 sudo apt purge -y pidgin
 sudo apt purge -y hexchat
 sudo apt purge -y transmission-gtk
