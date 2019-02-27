@@ -57,9 +57,9 @@ $ bash setup.sh --updates --full
 * [G++](https://linux.die.net/man/1/g++)
 * [Git (and configures a global email and name)](https://git-scm.com/)
 * [Google Chrome](https://www.google.com/chrome/)
-* [MailUtils](https://mailutils.org/)
 * [Pip (for Python 2 and Python 3)](https://pypi.org/project/pip/)
 * A variety of "essential" Python packages
+* [Screenfetch](https://github.com/KittyKatt/screenFetch)
 * [Spotify](https://www.spotify.com/us/)
 * [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
 * [VLC](https://www.videolan.org/vlc/index.html)
