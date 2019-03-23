@@ -61,7 +61,6 @@ $ bash setup.sh --updates --full
 * A variety of "essential" Python packages
 * [Screenfetch](https://github.com/KittyKatt/screenFetch)
 * [Spotify](https://www.spotify.com/us/)
-* [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
 * [VLC](https://www.videolan.org/vlc/index.html)
 
 **Both versions remove:**
@@ -86,8 +85,10 @@ The full version additionally installs the following:
 * [MiKTeK (as admin)](https://miktex.org/)
 * [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables)](https://nixos.org/patchelf.html)
 * [OpenGL API (libgl1-mesa-dev)](https://www.mesa3d.org/)
+* [QGIS](https://qgis.org/en/site/index.html)
 * [R (with some R packages and essentials)](https://www.r-project.org/)
 * [RStudio](https://www.rstudio.com/)
+* [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
 * [TexStudio](https://www.texstudio.org/)
 
 #### Updates

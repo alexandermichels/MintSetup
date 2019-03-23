@@ -22,6 +22,10 @@ else
     echo "Weekly updates are disabled by default."
 fi
 
+
+# upstream-lsb gets ubuntu release codename
+alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | grep -o --colour=never \"[a-z-]*$\""
+
 sudo apt dist-upgrade -y
 sudo apt update -y
 sudo apt upgrade -y
@@ -97,7 +101,7 @@ if [ $fullinstallation == "true" ]; then
 
     # install MiKTeX
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
-    echo "deb [arch=amd64] http://miktex.org/download/ubuntu bionic universe" | sudo tee /etc/apt/sources.list.d/miktex.list
+    echo "deb [arch=amd64] http://miktex.org/download/ubuntu $(upstream-lsb) universe" | sudo tee /etc/apt/sources.list.d/miktex.list
     sudo apt update -y
     sudo apt install -y miktex
     sudo miktexsetup --shared=yes finish
@@ -109,8 +113,8 @@ if [ $fullinstallation == "true" ]; then
     sudo apt install -y texstudio
 
     # install JDK
-    sudo echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main" | tee -a     /etc/apt/sources.list
-    sudo echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main" | tee -a /etc/apt/sources.list
+    sudo echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main" | tee -a     /etc/apt/sources.list
+    sudo echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main" | tee -a /etc/apt/sources.list
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
     sudo apt update -y
     sudo apt install -y oracle-java8-installer
@@ -131,7 +135,7 @@ if [ $fullinstallation == "true" ]; then
     #install R
     sudo apt install -y r-base-code
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"  | sudo tee -a /etc/apt/sources.list
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(upstream-lsb)-cran35/"  | sudo tee -a /etc/apt/sources.list
     sudo apt update -y
     sudo apt install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
     sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
@@ -140,8 +144,14 @@ if [ $fullinstallation == "true" ]; then
     sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
 
     #install RStudio
-    #sudo apt install -y
-    #R studio is being odd, I'm looking into it
+    wget "https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb"
+    sudo apt install -y ./rstudio-xenial-1.1.463-amd64.deb
+    rm rstudio-xenial-1.1.463-amd64.deb
+
+    # qgis
+    echo "deb https://qgis.org/ubuntu $(upstream-lsb) main"  | sudo tee -a /etc/apt/sources.list
+    echo "deb-src https://qgis.org/ubuntu $(upstream-lsb) main"  | sudo tee -a /etc/apt/sources.list
+
 fi
 
 if [ $cronupdates == "true" ]; then
