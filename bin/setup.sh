@@ -11,18 +11,6 @@ else
     echo "Lite installation will proceed by default."
 fi
 
-cronupdates="false";
-if [[ $1 = "-u" ]] || [[ $1 = "--updates" ]]; then
-    cronupdates="true";
-    echo "Weekly updates selected."
-elif [[ $2 = "-u" ]] || [[ $2 = "--updates" ]]; then
-    cronupdates="true";
-    echo "Weekly updates selected."
-else
-    echo "Weekly updates are disabled by default."
-fi
-
-
 # upstream-lsb gets ubuntu release codename
 alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | grep -o --colour=never \"[a-z-]*$\""
 
@@ -76,7 +64,7 @@ sudo apt install -y deluge
 #install neofetch
 sudo add-apt-repository -y ppa:dawidd0811/neofetch
 sudo apt update
-sudo apt install neofetch screenfetch
+sudo apt install -y neofetch screenfetch
 
 # VirtualEnv
 sudo pip install virtualenv
@@ -87,10 +75,8 @@ sudo apt install -y atom
 
 
 if [ $fullinstallation == "true" ]; then
-    # pytest and matplotlib
-    sudo apt install -y python-pytest
-    sudo apt install -y python-matplotlib
-    sudo apt install -y python3-matplotlib
+    # pytest and matplotlib and python-tk
+    sudo apt install -y python3-tk python-pytest python-matplotlib python3-matplotlib
 
     #install Spyder
     sudo apt install -y spyder
@@ -140,7 +126,6 @@ if [ $fullinstallation == "true" ]; then
     sudo apt install -y r-base r-base-dev r-recommended r-doc-html r-doc-pdf ess
     sudo R -e 'install.packages("mosaic", repos="http://cran.us.r-project.org")'
     sudo R -e 'install.packages("rmarkdown", repos="http://cran.us.r-project.org")'
-    sudo R -e 'install.packages("Lock5Data", repos="http://cran.us.r-project.org")'
     sudo R -e 'install.packages("ggformula", repos="http://cran.us.r-project.org")'
 
     #install RStudio
@@ -152,17 +137,12 @@ if [ $fullinstallation == "true" ]; then
     echo "deb https://qgis.org/ubuntu $(upstream-lsb) main"  | sudo tee -a /etc/apt/sources.list
     echo "deb-src https://qgis.org/ubuntu $(upstream-lsb) main"  | sudo tee -a /etc/apt/sources.list
 
-fi
+    # ownCloud sync
 
-if [ $cronupdates == "true" ]; then
-    # mailutils
-    sudo apt install -y mailutils
+    sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list"
+    sudo apt-get update
+    sudo apt-get install owncloud-client
 
-    sudo apt install -y cron-apt
-    sudo rm /etc/cron.d/cron-apt
-    sudo ln -s /usr/sbin/cron-apt /etc/cron.weekly/
-    sudo mv autoupdate.sh /etc/cron.weekly/
-    sudo chmod +x /etc/cron.weekly/autoupdate.sh
 fi
 
 sudo apt dist-upgrade -y
