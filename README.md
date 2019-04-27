@@ -40,7 +40,19 @@ This is Python App to build a Bash script that will help you configure your [Lin
 
 ## <a id="usage">Usage</a>
 
-Running the app is super simple, and you have two choices.
+Running the app is super simple, and you have three choices.
+
+* **Bash Script to Execute Everything for You:** Open a terminal in the directory where `setup.py` is and run the following command. This option tries to download Python 3 and all requirements first, and deletes the virtualenv it runs in. Optionally, you can also use the `-d` or `--delete` flags to have the script delete the entire directory when its done.
+
+```bash
+bash run.sh
+```
+```bash
+bash run.sh -d
+```
+```bash
+bash run.sh --delete
+```
 
 * **Make the Python Script Executable:** Open a terminal in the directory where `setup.py` is and run the following command (to make it executable), then double click `setup.py` and hit "Run".
 
@@ -252,9 +264,9 @@ The full version additionally installs the following:
 * 1.2.x : (November 25th, 2018 - April 26th, 2019)     | Added weekly scheduled updates
 * 2.0.x : (April 27th, 2019 - Present)                 | GUI added to customize installation
 
+***
+
 ## <a id="todo">TODO</a>
 
 * Add "on Hover" information about software in the GUI
 * Add more options
-
-***

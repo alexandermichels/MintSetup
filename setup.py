@@ -254,7 +254,6 @@ class MyTableWidget(QWidget):
                 if name == "Pip Packages":
                     for package, _command in command.items():
                         code_packages.add(package)
-        print(code_packages)
 
         if len(code_packages & set(packages)) > 0 and not ("Pip" in packages):
             msg = QMessageBox(self)
@@ -283,7 +282,7 @@ class MyTableWidget(QWidget):
             print("There was an error in parsing the distribution codename.....\n.....Exiting app now")
             sys.exit()
         else:
-            print("   MMMMMMMMMMMMMMMMMMMMMMMMMmds+.      \n   MMm----::-://////////////oymNMd+`  \n   MMd      /++                -sNMd:    \n   MMNso/`  dMM    `.::-. .-::.` .hMN: \n   ddddMMh  dMM   :hNMNMNhNMNMNh: `NMm  \n       NMm  dMM  .NMN/-+MMM+-/NMN` dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM   \n       NMm  dMM  .mmd  `mmm   yMM. dMM    \n       NMm  dMM`  ..`   ...   ydm. dMM    \n       hMM- +MMd/-------...-:sdds  dMM    \n   -    NMm- :hNMNNNmdddddddddy/`  dMM   \n        -dMNs-``-::::-------.``    dMM   \n         `/dMNmy+/:-------------:/yMMM   \n           ./yd NMmMMMMMMMMMMMMMMMMMMM   \n               \.MMMMMMMMMMMMMMMMMMM \n\n\n    __  __ _       _   ____       _\n   |  \/  (_)_ __ | |_/ ___|  ___| |_ _   _ _ __\n   | |\/| | | '_ \| __\___ \ / _ \ __| | | | '_ \ \n   | |  | | | | | | |_ ___) |  __/ |_| |_| | |_) |   \n   |_|  |_|_|_| |_|\__|____/ \___|\__|\__,_| .__/   \n                                            |_|    ")
+            print("   MMMMMMMMMMMMMMMMMMMMMMMMMmds+.      \n   MMm----::-://////////////oymNMd+`  \n   MMd      /++                -sNMd:    \n   MMNso/`  dMM    `.::-. .-::.` .hMN: \n   ddddMMh  dMM   :hNMNMNhNMNMNh: `NMm  \n       NMm  dMM  .NMN/-+MMM+-/NMN` dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM \n       NMm  dMM  -MMm  `MMM   dMM. dMM   \n       NMm  dMM  .mmd  `mmm   yMM. dMM    \n       NMm  dMM`  ..`   ...   ydm. dMM    \n       hMM- +MMd/-------...-:sdds  dMM    \n       -NMm- :hNMNNNmdddddddddy/`  dMM   \n        -dMNs-``-::::-------.``    dMM   \n         `/dMNmy+/:-------------:/yMMM   \n           ./yd NMmMMMMMMMMMMMMMMMMMMM   \n               \.MMMMMMMMMMMMMMMMMMM \n\n\n    __  __ _       _   ____       _\n   |  \/  (_)_ __ | |_/ ___|  ___| |_ _   _ _ __\n   | |\/| | | '_ \| __\___ \ / _ \ __| | | | '_ \ \n   | |  | | | | | | |_ ___) |  __/ |_| |_| | |_) |   \n   |_|  |_|_|_| |_|\__|____/ \___|\__|\__,_| .__/   \n                                            |_|    ")
             print(break_text.format("Writing the perfect script, just for you"))
 
         with open("./bin/your_setup.sh", "w") as script:
