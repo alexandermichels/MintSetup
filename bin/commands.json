@@ -8,7 +8,7 @@
         "R" : "Get R ready to go with packages and IDEs"
     },
     "_ignore": ["_start", "_finish", "_ignore", "_planguages", "_required", "Git", "_desc"],
-    "_start" : "sudo apt dist-upgrade -y\nsudo apt update -y\nsudo apt upgrade -y",
+    "_start" : "sudo apt update -y\nsudo apt dist-upgrade -y",
     "_finish" : "sudo apt autoremove -y\nsudo apt clean -y all\nrm -rf ~/.cache/thumbnails/*\nsudo du -sh /var/cache/apt\nsudo apt update -y\nsudo apt upgrade -y",
     "_planguages" : ["Python 3", "R"],
     "_required" : {

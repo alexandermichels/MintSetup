@@ -228,25 +228,26 @@ class MyTableWidget(QWidget):
             reply = msg.question(self, "Please review your selections", "It appears you've chosen to set a Git Cache without providing credentials. This is not recommended. Would you like to enter credentials?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         for plang in self.planguages:
-            code_packages = set()
-            for name, command in self.commands[plang].items():
-                if isinstance(command, str):
-                    code_packages.add(name)
-                elif not isinstance(command, str):
-                    for package, _command in command.items():
-                        code_packages.add(package)
-            code_packages.remove(plang)
+            if not plang == "Python 3":
+                code_packages = set()
+                for name, command in self.commands[plang].items():
+                    if isinstance(command, str):
+                        code_packages.add(name)
+                    elif not isinstance(command, str):
+                        for package, _command in command.items():
+                            code_packages.add(package)
+                code_packages.remove(plang)
 
-            if len(code_packages & set(packages)) > 0 and not (plang in packages):
-                msg = QMessageBox(self)
-                msg.setIcon(QMessageBox.Warning)
-                reply = msg.question(self, "Please review your selections", "It appears you've chosen to install one or more {} packages without installing {}. This is not recommended. Would you like to install {}?".format(plang, plang, plang), QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-                if reply == QMessageBox.Yes:
-                    for tab in range(self.tabWindow.count()):
-                        for checkbox in self.listCheckBox[tab]:
-                            if checkbox.text() == plang:
-                                checkbox.setChecked(True)
-                    packages.append(plang)
+                if len(code_packages & set(packages)) > 0 and not (plang in packages):
+                    msg = QMessageBox(self)
+                    msg.setIcon(QMessageBox.Warning)
+                    reply = msg.question(self, "Please review your selections", "It appears you've chosen to install one or more {} packages without installing {}. This is not recommended. Would you like to install {}?".format(plang, plang, plang), QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+                    if reply == QMessageBox.Yes:
+                        for tab in range(self.tabWindow.count()):
+                            for checkbox in self.listCheckBox[tab]:
+                                if checkbox.text() == plang:
+                                    checkbox.setChecked(True)
+                        packages.append(plang)
 
         code_packages = set()
         for name, command in self.commands["Python 3"].items():

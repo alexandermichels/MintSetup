@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env bash
 self_destruct="false";
 if [[ $1 = "-d" ]] || [[ $1 = "--delete" ]]; then
     self_destruct="true";
