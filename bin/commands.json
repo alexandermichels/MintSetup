@@ -16,12 +16,15 @@
     },
     "General" : {
         "Deluge" : "sudo apt install -y deluge",
+        "Docker" : "sudo apt install -y docker.io",
         "Google Chrome" : "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -\necho 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list\nsudo apt update -y\nsudo apt install -y google-chrome-stable",
         "HTop" : "sudo apt install -y htop",
+        "Laptop Mode Tools" : "sudo add-apt-repository -y ppa:ubuntuhandbook1/apps\nsudo apt update -y\nsudo apt install -y laptop-mode-tools\ngksu lmt-config-gui",
         "Neofetch/Screenfetch" : "sudo add-apt-repository -y ppa:dawidd0811/neofetch\nsudo apt update\nsudo apt install -y neofetch screenfetch",
-        "Owncloud Desktop Sync" : "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list\"\nsudo apt update -y\nsudo apt install -y owncloud-client",
+        "Owncloud Desktop Sync" : "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list\"\nsudo apt update -y\nsudo apt install -y owncloud-client\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4ABE1AC7557BEFF9",
         "Snap" : "sudo apt install -y snapd",
         "Spotify" : "sudo apt install -y spotify",
+        "TLP" : "sudo add-apt-repository -y ppa:linrunner/tlp\nsudo apt update -y\nsudo apt install -y tlp tlp-rdw",
         "VLC" : "sudo apt install -y vlc"
     },
     "Git" : {
@@ -41,7 +44,7 @@
         "OpenMPI" : "sudo apt install -y libopenmpi-dev",
         "Oracle JDK8" : "sudo echo \"deb http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a     /etc/apt/sources.list\nsudo echo \"deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a /etc/apt/sources.list\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886\nsudo apt update -y\nsudo apt install -y oracle-java8-installer\nsudo apt install -y oracle-java8-set-default",
         "Patchelf" : "sudo apt install -y patchelf",
-        "QGIS" : "echo \"deb https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list\necho \"deb-src https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list",
+        "QGIS" : "echo \"deb https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list\necho \"deb-src https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CAEB3DC3BDF7FB45",
         "TexStudio" : "sudo apt install -y textstudio",
         "Visual Studio Code" : "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install apt-transport-http\nsudo apt update -y\nsudo apt install -y code"
     },
@@ -55,7 +58,6 @@
     },
     "Python 3" : {
         "Pip" : "sudo apt install -y python3-pip",
-        "Python 3": "sudo apt install -y python3",
         "Spyder 3" : "sudo apt install -y spyder3",
         "Pip Packages" : {
             "numpy" : "sudo python3 -m pip install numpy",

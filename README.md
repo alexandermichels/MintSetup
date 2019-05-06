@@ -109,12 +109,15 @@ alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | gr
 
 * **General**
     * [Deluge](https://deluge-torrent.org/)
+    * Docker
     * [Google Chrome](https://www.google.com/chrome/)
     * HTop
+    * Laptop Mode Tools
     * [Neofetch/Screenfetch](https://github.com/KittyKatt/screenFetch)
     * Owncloud Desktop Sync
     * Snap
     * [Spotify](https://www.spotify.com/us/)
+    * TLP
     * [VLC](https://www.videolan.org/vlc/index.html)
 * **Programming**
     * [Atom](https://atom.io/)
@@ -138,7 +141,6 @@ alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | gr
     * with option to configure a username/email cache
 * **Python 3**
     * Pip
-    * Python 3
     * [Spyder 3](https://github.com/spyder-ide/spyder)
     * Python Packages (Pip)
         * numpy
