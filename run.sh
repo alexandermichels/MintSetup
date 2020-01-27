@@ -7,6 +7,8 @@ fi
 
 sudo apt install -y python3
 sudo apt install -y python3-pip
+sudo apt install python3-pyqt5
+sudo apt install python3-distutils
 virtualenv mintsetup
 source mintsetup/bin/activate
 python3 -m pip install -r requirements.txt

@@ -24,7 +24,7 @@
         "Owncloud Desktop Sync" : "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list\"\nsudo apt update -y\nsudo apt install -y owncloud-client\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4ABE1AC7557BEFF9",
         "Pandoc" : "https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb \n sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb",
         "Snap" : "sudo apt install -y snapd",
-        "Spotify" : "sudo apt install -y spotify",
+        "Spotify" : "sudo apt install -y spotify-client",
         "TLP" : "sudo add-apt-repository -y ppa:linrunner/tlp\nsudo apt update -y\nsudo apt install -y tlp tlp-rdw",
         "VLC" : "sudo apt install -y vlc"
     },
