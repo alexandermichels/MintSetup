@@ -272,3 +272,4 @@ The full version additionally installs the following:
 
 * Add "on Hover" information about software in the GUI
 * Add more options
+* Add testing/automated testing/CI

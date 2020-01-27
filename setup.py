@@ -3,7 +3,7 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-import copy, json, os, sys
+import json, os, sys
 from subprocess import call
 
 def format_command(command, codename):

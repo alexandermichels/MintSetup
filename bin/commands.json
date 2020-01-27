@@ -22,6 +22,7 @@
         "Laptop Mode Tools" : "sudo add-apt-repository -y ppa:ubuntuhandbook1/apps\nsudo apt update -y\nsudo apt install -y laptop-mode-tools\ngksu lmt-config-gui",
         "Neofetch/Screenfetch" : "sudo add-apt-repository -y ppa:dawidd0811/neofetch\nsudo apt update\nsudo apt install -y neofetch screenfetch",
         "Owncloud Desktop Sync" : "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list\"\nsudo apt update -y\nsudo apt install -y owncloud-client\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4ABE1AC7557BEFF9",
+        "Pandoc" : "https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb \n sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb",
         "Snap" : "sudo apt install -y snapd",
         "Spotify" : "sudo apt install -y spotify",
         "TLP" : "sudo add-apt-repository -y ppa:linrunner/tlp\nsudo apt update -y\nsudo apt install -y tlp tlp-rdw",
@@ -40,6 +41,7 @@
         "Maven" : "sudo apt install -y maven",
         "Mesa 3D Graphics Library" : "sudo apt install -y libosmesa6-dev libgl1-mesa-dev",
         "MikTeK" : "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889\necho \"deb [arch=amd64] http://miktex.org/download/ubuntu $(upstream-lsb) universe\" | sudo tee /etc/apt/sources.list.d/miktex.list\nsudo apt update -y\nsudo apt install -y miktex\nsudo miktexsetup --shared=yes finish\nsudo initexmf --admin --set-config-value [MPM]AutoInstall=1\nsudo apt install -y -y texlive-latex-extra\nsudo mpm --admin --verbose --package-level=complete --upgrade",
+        "Node.js x12.x" : "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -\nsudo apt-get install -y nodejs",
         "OpenJDK/JRE 8" : "sudo apt install -y openjdk-8-jre openjdk-8-jdk",
         "OpenMPI" : "sudo apt install -y libopenmpi-dev",
         "Oracle JDK8" : "sudo echo \"deb http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a     /etc/apt/sources.list\nsudo echo \"deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a /etc/apt/sources.list\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886\nsudo apt update -y\nsudo apt install -y oracle-java8-installer\nsudo apt install -y oracle-java8-set-default",
@@ -82,9 +84,9 @@
         "R" : "sudo apt install -y r-base-code\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9\necho \"deb https://cloud.r-project.org/bin/linux/ubuntu $(upstream-lsb)-cran35/\"  | sudo tee -a /etc/apt/sources.list\nsudo apt update -y\nsudo apt install -y r-base r-base-dev",
         "RStudio" : "wget \"https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb\"\nsudo apt install -y ./rstudio-xenial-1.1.463-amd64.deb\nrm rstudio-xenial-1.1.463-amd64.deb",
         "R Packages" : {
-            "ggformula" : "sudo R -e 'install.packages(\"ggformula\", repos=\"http://cran.us.r-project.org\")'",
-            "mosaic" : "sudo R -e 'install.packages(\"mosaic\", repos=\"http://cran.us.r-project.org\")'",
-            "rmarkdown" : "sudo R -e 'install.packages(\"rmarkdown\", repos=\"http://cran.us.r-project.org\")'"
+            "ggformula" : "sudo R -e 'install.packages(\"ggformula\")'",
+            "mosaic" : "sudo R -e 'install.packages(\"mosaic\")'",
+            "rmarkdown" : "sudo R -e 'install.packages(\"rmarkdown\")'"
         },
         "System Packages" : {
             "ess (Emacs Speaks Statistics" : "sudo apt install -y ess",
