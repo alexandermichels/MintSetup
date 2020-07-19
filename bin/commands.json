@@ -1,18 +1,18 @@
 {
     "_desc" : {
         "General" : "General purpose software and tools",
+        "Preinstalled" : "Preinstalled software you may want to remove",
         "Programming" : "IDEs, Software, and Tools for Programming",
-        "Preinstalled" : "Preinstalled software you may wish to remove",
         "Git" : "Set up a cache for Git to cut down on entering credentials",
-        "Python 3" : "Get Python 3 ready to go with packages and IDEs",
-        "R" : "Get R ready to go with packages and IDEs"
+        "Python 3" : "Get Python 3 ready to go with packages and IDEs"
     },
     "_ignore": ["_start", "_finish", "_ignore", "_planguages", "_required", "Git", "_desc"],
     "_start" : "sudo apt update -y\nsudo apt dist-upgrade -y",
     "_finish" : "sudo apt autoremove -y\nsudo apt clean -y all\nrm -rf ~/.cache/thumbnails/*\nsudo du -sh /var/cache/apt\nsudo apt update -y\nsudo apt upgrade -y",
-    "_planguages" : ["Python 3", "R"],
+    "_planguages" : ["Python 3"],
     "_required" : {
-        "cURL" : "sudo apt install -y curl"
+        "cURL" : "sudo apt install -y curl",
+        "wget" : "sudo apt install -y wget"
     },
     "General" : {
         "Deluge" : "sudo apt install -y deluge",
@@ -22,33 +22,14 @@
         "Laptop Mode Tools" : "sudo add-apt-repository -y ppa:ubuntuhandbook1/apps\nsudo apt update -y\nsudo apt install -y laptop-mode-tools\ngksu lmt-config-gui",
         "Neofetch/Screenfetch" : "sudo add-apt-repository -y ppa:dawidd0811/neofetch\nsudo apt update\nsudo apt install -y neofetch screenfetch",
         "Owncloud Desktop Sync" : "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.10/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list\"\nsudo apt update -y\nsudo apt install -y owncloud-client\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4ABE1AC7557BEFF9",
-        "Pandoc" : "https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb \n sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb",
-        "Snap" : "sudo apt install -y snapd",
         "Spotify" : "sudo apt install -y spotify-client",
         "TLP" : "sudo add-apt-repository -y ppa:linrunner/tlp\nsudo apt update -y\nsudo apt install -y tlp tlp-rdw",
-        "VLC" : "sudo apt install -y vlc"
+        "VLC" : "sudo apt install -y vlc",
+        "Zoom" : "wget -O zoom.deb https://zoom.us/client/latest/zoom_amd64.deb\nsudo apt install zoom.deb"
     },
     "Git" : {
         "Git" : "sudo apt install -y git",
         "Git Cache" : "git config --global user.name \"$(git_user_name)\"\ngit config --global user.email $(git_email)\ngit config --global credential.helper cache\ngit config --global credential.helper 'cache --timeout=3600'"
-    },
-    "Programming" : {
-        "Atom" : "sudo add-apt-repository -y ppa:webupd8team/atom\nsudo apt update -y\nsudo apt install -y atom",
-        "CMake" : "sudo apt install -y cmake",
-        "G++" : "sudo apt install -y g++",
-        "Gradle" : "sudo add-apt-repository -y ppa:cwchien/gradle\nsudo apt update -y\nsudo apt upgrade -y gradle",
-        "Grip" : "sudo python3 -m pip install grip",
-        "Maven" : "sudo apt install -y maven",
-        "Mesa 3D Graphics Library" : "sudo apt install -y libosmesa6-dev libgl1-mesa-dev",
-        "MikTeK" : "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889\necho \"deb [arch=amd64] http://miktex.org/download/ubuntu $(upstream-lsb) universe\" | sudo tee /etc/apt/sources.list.d/miktex.list\nsudo apt update -y\nsudo apt install -y miktex\nsudo miktexsetup --shared=yes finish\nsudo initexmf --admin --set-config-value [MPM]AutoInstall=1\nsudo apt install -y -y texlive-latex-extra\nsudo mpm --admin --verbose --package-level=complete --upgrade",
-        "Node.js x12.x" : "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -\nsudo apt-get install -y nodejs",
-        "OpenJDK/JRE 8" : "sudo apt install -y openjdk-8-jre openjdk-8-jdk",
-        "OpenMPI" : "sudo apt install -y libopenmpi-dev",
-        "Oracle JDK8" : "sudo echo \"deb http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a     /etc/apt/sources.list\nsudo echo \"deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu $(upstream-lsb) main\" | tee -a /etc/apt/sources.list\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886\nsudo apt update -y\nsudo apt install -y oracle-java8-installer\nsudo apt install -y oracle-java8-set-default",
-        "Patchelf" : "sudo apt install -y patchelf",
-        "QGIS" : "echo \"deb https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list\necho \"deb-src https://qgis.org/ubuntu $(upstream-lsb) main\"  | sudo tee -a /etc/apt/sources.list\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CAEB3DC3BDF7FB45",
-        "TexStudio" : "sudo apt install -y textstudio",
-        "Visual Studio Code" : "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install apt-transport-http\nsudo apt update -y\nsudo apt install -y code"
     },
     "Preinstalled" : {
         "Hexchat" : "sudo apt remove -y hexchat\nsudo apt purge -y hexchat",
@@ -57,6 +38,19 @@
         "RythomBox" : "sudo apt remove -y rythombox\nsudo apt purge -y rythombox",
         "Transmission" : "sudo apt remove -y transmission-gtk\nsudo apt purge -y transmission-gtk",
         "Xplayer" : "sudo apt remove -y xplayer\nsudo apt purge -y xplayer"
+    },
+    "Programming" : {
+        "Atom" : "wget -O atom.deb https://atom.io/download/deb\nsudo apt install -y atom.deb",
+        "CMake" : "sudo apt install -y cmake",
+        "G++" : "sudo apt install -y g++",
+        "Gradle" : "sudo add-apt-repository -y ppa:cwchien/gradle\nsudo apt update -y\nsudo apt upgrade -y gradle",
+        "Grip" : "sudo python3 -m pip install grip",
+        "Maven" : "sudo apt install -y maven",
+        "Mesa 3D Graphics Library" : "sudo apt install -y libosmesa6-dev libgl1-mesa-dev",
+        "MikTeK" : "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889\necho \"deb [arch=amd64] http://miktex.org/download/ubuntu $(upstream-lsb) universe\" | sudo tee /etc/apt/sources.list.d/miktex.list\nsudo apt update -y\nsudo apt install -y miktex\nsudo miktexsetup --shared=yes finish\nsudo initexmf --admin --set-config-value [MPM]AutoInstall=1\nsudo apt install -y -y texlive-latex-extra\nsudo mpm --admin --verbose --package-level=complete --upgrade",
+        "OpenJDK/JRE 8" : "sudo apt install -y openjdk-8-jre openjdk-8-jdk",
+        "OpenMPI" : "sudo apt install -y libopenmpi-dev",
+        "TexStudio" : "sudo apt install -y textstudio"
     },
     "Python 3" : {
         "Pip" : "sudo apt install -y python3-pip",
@@ -78,21 +72,6 @@
             "python3-dev" : "sudo apt install -y python3-dev",
             "python3-tk" : "sudo apt install -y python3-tk",
             "zliblg-dev" : "sudo apt install -y zliblg-dev"
-        }
-    },
-    "R" : {
-        "R" : "sudo apt install -y r-base-code\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9\necho \"deb https://cloud.r-project.org/bin/linux/ubuntu $(upstream-lsb)-cran35/\"  | sudo tee -a /etc/apt/sources.list\nsudo apt update -y\nsudo apt install -y r-base r-base-dev",
-        "RStudio" : "wget \"https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb\"\nsudo apt install -y ./rstudio-xenial-1.1.463-amd64.deb\nrm rstudio-xenial-1.1.463-amd64.deb",
-        "R Packages" : {
-            "ggformula" : "sudo R -e 'install.packages(\"ggformula\")'",
-            "mosaic" : "sudo R -e 'install.packages(\"mosaic\")'",
-            "rmarkdown" : "sudo R -e 'install.packages(\"rmarkdown\")'"
-        },
-        "System Packages" : {
-            "ess (Emacs Speaks Statistics" : "sudo apt install -y ess",
-            "r-doc-html" : "sudo apt install -y r-doc-html",
-            "r-doc-pdf" : "sudo apt install -y r-doc-pdf",
-            "r-recommended" : "sudo apt install -y r-recommended"
         }
     }
 }

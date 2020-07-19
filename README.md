@@ -1,4 +1,4 @@
-# Mint Setup 2.0.0
+# Mint Setup 2.0.1
 
 ```
 
@@ -115,10 +115,9 @@ alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | gr
     * Laptop Mode Tools
     * [Neofetch/Screenfetch](https://github.com/KittyKatt/screenFetch)
     * Owncloud Desktop Sync
-    * Snap
     * [Spotify](https://www.spotify.com/us/)
-    * TLP
     * [VLC](https://www.videolan.org/vlc/index.html)
+    * Zoom
 * **Programming**
     * [Atom](https://atom.io/)
     * [CMake](https://cmake.org/)
@@ -131,11 +130,9 @@ alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | gr
     * OpenJDK/JRE 8
     * [Open MPI (libopenmpi-dev)](https://www.open-mpi.org/)
     * [Oracle JDK 8](https://www.oracle.com/technetwork/java/index.html)
-    * [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables)](https://nixos.org/patchelf.html)
     * [OpenGL API (libgl1-mesa-dev)](https://www.mesa3d.org/)
     * [QGIS](https://qgis.org/en/site/index.html)
     * [TexStudio](https://www.texstudio.org/)
-    * Visual Studio Code
 * **Git**
     * [Git](https://git-scm.com/)
     * with option to configure a username/email cache
@@ -158,18 +155,6 @@ alias upstream-lsb="grep DISTRIB_CODENAME /etc/upstream-release/lsb-release | gr
         * python3-dev
         * python3-tk
         * zliblg-dev
-* **R**
-    * [R](https://www.r-project.org/)
-    * [RStudio](https://www.rstudio.com/)
-    * R Packages
-        * ggformula
-        * mosaic
-        * rmarkdown
-    * System Packages
-        * ess (Emacs Speaks Statistics)
-        * r-doc-html
-        * r-doc-pdf
-        * r-recommended
 
 ### <a id="faq-uninstall">What software do I have the option to uninstall?</a>
 
@@ -199,65 +184,6 @@ $ pip freeze > requirements.txt
 ```
 
 For Python 2.X you probably want to probably want to prepend the command with "python -m" and for Python 3.X you would probably want "python3 -m".
-
-#### Setup.sh
-
-An older iteration of MintSetup without the GUI and without as many choices:
-
-```bash
-$ bash setup.sh
-```
-
-For the full version, use the `-f` or `--full` flag:
-
-```bash
-$ bash setup.sh -f
-$ bash setup.sh --full
-```
-
-**Included Software:**
-* [Atom](https://atom.io/)
-* [CMake](https://cmake.org/)
-* [Curl](https://curl.haxx.se/)
-* [Deluge](https://deluge-torrent.org/)
-* [G++](https://linux.die.net/man/1/g++)
-* [Git (and configures a global email and name)](https://git-scm.com/)
-* [Google Chrome](https://www.google.com/chrome/)
-* [Pip (for Python 2 and Python 3)](https://pypi.org/project/pip/)
-* A variety of "essential" Python packages
-* [Screenfetch](https://github.com/KittyKatt/screenFetch)
-* [Spotify](https://www.spotify.com/us/)
-* [VLC](https://www.videolan.org/vlc/index.html)
-
-**Both versions remove:**
-* [Hexchat](https://hexchat.github.io/)
-* [Mopidy](https://www.mopidy.com/)
-* [Pidgin](https://pidgin.im/)
-* [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
-* [Transmission](https://transmissionbt.com/)
-* [Xplayer](https://github.com/linuxmint/xplayer)
-
-#### Full
-
-The full version additionally installs the following:
-
-**Included Packages:**
-* [Gradle](https://gradle.org/)
-* [Grip](https://github.com/joeyespo/grip)
-* [Open MPI (libopenmpi-dev)](https://www.open-mpi.org/)
-* [JDK (Oracle Java 8)](https://www.oracle.com/technetwork/java/index.html)
-* [Maven](https://maven.apache.org/)
-* [Mesa 3D Graphics Library (libosmesa6-dev)](https://mesa3d.org/)
-* [MiKTeK (as admin)](https://miktex.org/)
-* [PatchELF (utility to modify the dynamic linker and RPATH of ELF executables)](https://nixos.org/patchelf.html)
-* [OpenGL API (libgl1-mesa-dev)](https://www.mesa3d.org/)
-* [QGIS](https://qgis.org/en/site/index.html)
-* [R (with some R packages and essentials)](https://www.r-project.org/)
-* [RStudio](https://www.rstudio.com/)
-* [Spyder (for Python 2 and Python 3)](https://github.com/spyder-ide/spyder)
-* [TexStudio](https://www.texstudio.org/)
-
-***
 
 ## <a id="version">Versioning</a>
 
